@@ -1,0 +1,17 @@
+<form action="/accounts/register" method ="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="firstname" name="firstname"><br>
+    <input type="text" placeholder="lastname" name="lastname"><br>
+    <input type="text" placeholder="email" name="email"><br>
+    <input type="text" placeholder="password1" name="password1"><br>   
+    <input type="text" placeholder="password2" name="password2"><br> 
+    <input type="submit" >
+
+</from>
+<div>
+    {% for message in messages %}
+    <h3>
+        {{message}}
+    </h3>
+    {% endfor %}
+</div>
